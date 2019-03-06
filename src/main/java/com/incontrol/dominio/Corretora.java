@@ -33,11 +33,6 @@ public class Corretora {
 	@Column(unique = true)
 	private long cnpj;
 
-	@OneToOne
-	@NotNull(message = "É obrigatório informar a taxa de corretagem atual")
-	@Column(name = "id_corretagem")
-	private Corretagem corretagem;
-
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_cadastro")
 	private Date dataCadastro;

@@ -18,7 +18,7 @@ public class Configuracao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "relação risco_retorno")
+	@Column(name = "relacao_risco_retorno")
 	private int relacaoRiscoRetorno;
 
 	@Column(name = "minimo_porcentagem_ganho")
