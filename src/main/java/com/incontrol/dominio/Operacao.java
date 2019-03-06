@@ -9,6 +9,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity(name = "operacao")
@@ -24,6 +26,10 @@ public class Operacao {
 	private BigDecimal preco;
 
 	private int quantidade;
+
+	@ManyToOne
+	@JoinColumn(name = "id_nota_corretagem")
+	private NotaCorretagem notaCorretagem;
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo_operacao")
